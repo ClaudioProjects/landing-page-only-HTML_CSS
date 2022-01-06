@@ -1,0 +1,467 @@
+:root {
+    --primary-color: #0A1128;
+    --color-white: #fff;
+    --gap: 3rem;
+    --light-gray-color: #A9A9A9;
+    --font-normal: 2.3rem;
+}
+
+.white-color {
+    color: var(--color-white);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+/*
+define o rem pra 10 pixels
+*/
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+body {
+    font-family: 'Open sans', sans-serif;
+    font-size: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 3rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-bg {
+    background: url('/Assets/IMG/background.svg');
+   
+    
+}
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.section {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.white-bg {
+    background: var(--color-white);
+    color: var(--primary-color);
+}
+.menu-spacing {
+    height: 6.4rem;
+}
+
+/*Classes Menu*/
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 0.1rem solid var(--light-gray-color);
+    border-top: 0.1rem solid var(--light-gray-color);
+    z-index: 1;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+
+.menu h1 a {
+    color: inherit;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 85%;
+    height: 0.2rem;
+    background: var(--primary-color);
+}
+
+.menu ul li a:hover {
+    background: var(--primary-color);
+    color: var(--color-white);
+    border-radius: 2rem 0 2rem 0;
+    transition: 300ms ease-in-out;
+}
+
+/*Trabalhando com classes .intro e img*/
+
+.intro-content {
+    position: relative;
+    display: grid;
+    grid-template-columns:1fr 1.5fr;
+    gap: var(--gap);
+    min-height: 100vh;
+    color: var(--color-white);
+}
+
+.intro-text-content, .intro-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 6rem;
+    margin-bottom: 4rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.intro-text-content p {
+    font-size: var(--font-normal);
+}
+
+/*Arrumando a img da intro-img*/
+
+.intro-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Configurando a segunda pagina*/
+.pag-2-text {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding:var(--gap);
+    
+}
+
+.pag-2-text {
+    text-align: center;
+    
+}
+
+.pag-2-text p {
+    font-size: var(--font-normal);
+    padding-top: 5rem;
+    max-width: 64rem;
+}
+
+/* terceira Pagina */
+
+.grid-one-content {
+    display: flex;
+    flex-flow: column ;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+.grid-one-content-h2 {
+    margin-bottom: 2rem;
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 7rem;
+    margin-bottom: 1rem;
+}
+
+.grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    left: 0.2rem;
+    top: -3rem;
+    font-style: italic;
+    transform: rotate(5deg);
+    font-size: 7rem;
+}
+
+.grid-text {
+    margin-bottom: 9rem;
+    padding-left: 1rem;
+}
+
+/* Mexendo na grid-img */
+
+.grid-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.grid-img img {
+    transition: 300ms ease-in-out;
+}
+
+.grid-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.pricing-main h2, .pricing-main p{
+    text-align: center;
+}
+
+.pricing-main table {
+    text-align: left;
+    margin: 0 auto;
+    min-width: 300px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pricing-main table caption {
+    font-style: italic;
+    font-size: 1.9rem;
+    text-align: left;
+}
+
+.pricing-main table td, .pricing-main table th {
+    border: 0.1rem solid var(--light-gray-color);
+    padding: 1rem;
+}
+
+.pricing-main table tfoot td, .pricing-main table tfoot th {
+    background: var(--light-gray-color);
+}
+
+.table-responsive {
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.contact-form {
+    grid-column: span 2;
+}
+
+.form-grid {
+    border: none;
+    font-style: italic;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--gap);
+}
+
+.form-group {
+    flex: 1 1 50rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    border: none;
+    background: var(--color-white);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+.full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.box-msg {
+    height: 12rem;
+}
+
+.form-group button {
+    border: 0.5rem solid var(--color-white);
+    padding: 1.5rem 2rem;
+    background: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    border-radius: 60px;
+}
+
+.form-group button:hover {
+    background: var(--color-white);
+    color: var(--primary-color);
+    border: 0.5rem solid var(--primary-color);
+}
+
+.contact-form .form-grid legend {
+    margin-bottom: 4rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    box-shadow: 0 0.5rem 1rem crimson;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 14rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+
+footer .heart{
+    color: red;
+}
+
+.close-menu {
+    display: none;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--color-white);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    border: 0.1rem solid var(--primary-color);
+    transform: rotate(-90deg);
+}
+
+@media (max-width: 800px) {
+    .intro-content, .grid {
+        grid-template-columns: 1fr;
+    }
+    .grid-img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .grid-img img {
+        width: 100%;
+    }
+    .contact-form {
+        grid-column: span 1;
+    }
+    .menu {
+        bottom: 0;
+        text-align: center;
+    }
+    .menu-content ul li a::after {
+        content: none;
+    }
+    .menu-content {
+        height: 100vh;
+    }
+    .menu-content, .menu-content ul {
+        flex-flow: column;
+        justify-content: center;
+    }
+    .menu {
+        display: none;
+    }
+
+    .close-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+    .close-menu-label::after {
+        content: "☰";
+        color: var(--color-white);
+        position: fixed;
+        background: var(--primary-color);
+        top: 2rem;
+        right: 2rem;
+        z-index: 2;
+        font-size: 3rem;
+        line-height: 3rem;
+        height: 3rem;
+        width: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: 35%;
+    }
+    /* X */
+    .close-menu:checked~.menu {
+        display: block;
+    }
+    .close-menu:checked~.close-menu-label::after {
+        content: "X";
+    }
+    .menu-spacing {
+        display: none;
+    }
+}
