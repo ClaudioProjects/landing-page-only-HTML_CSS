@@ -68,9 +68,8 @@ a {
 }
 
 .main-bg {
-    background: url('/Assets/IMG/background.svg');
-   
-    
+    background: url(/IMG/background-2.svg);
+    background-size:auto;
 }
 
 .main-content {
